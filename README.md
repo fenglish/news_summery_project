@@ -4,7 +4,7 @@ This is one of Makers Academy weekend challenges in week7.
 
 ## Project overview
 
-Your app will grab all the headlines from the Guardian newspaper API and display them on a page.  Clicking on a headline will show a summary of the article.
+This app grabs all the headlines from the Guardian newspaper API and display them on a page. Clicking on a headline shows a summary of the article.
 
 ### Technologies
 
@@ -62,9 +62,9 @@ To make my news reading more fun
 ![Article page mockup](/images/news-summary-project-article-page-mockup.png)
 
 ## API
-
-- the Guardian API
-- the Aylien text summarisation API
+#### the News Summary API
+The basic idea is to send an apiRequestUrl query parameter to the News Summary API. The value of this parameter is the URL of the request you would have made to the Guardian or Aylien API, minus any API credentials.
+you can see the code for in this repo: https://github.com/makersacademy/news-summary-api
 
 ## Resources
 
