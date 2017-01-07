@@ -10,7 +10,7 @@ var news = {};
 })();
 
 (function(){
-  test.description = "It should add News";
+  test.description = "It should add News to allNews property";
   var list = new NewsList();
   list.addNews(news);
   assert.isTrue( list.allNews[0] === news );
