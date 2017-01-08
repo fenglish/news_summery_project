@@ -1,4 +1,4 @@
-test.constructorName = "NewsList View";
+test.constructorName = "NewsListView";
 // doubles
 var news = { headline: "This is a headline", imageURL: "http://imageURL"};
 

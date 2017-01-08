@@ -1,4 +1,4 @@
-test.constructorName = "News Model";
+test.constructorName = "NewsModel";
 
 (function(){
   test.description = "It should have headline property";

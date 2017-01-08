@@ -1,4 +1,4 @@
-test.constructorName = "NewsList Model";
+test.constructorName = "NewsListModel";
 // doubles
 var news = {};
 

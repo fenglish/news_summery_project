@@ -1,4 +1,4 @@
-test.constructorName = "NewsList Controller";
+test.constructorName = "NewsListController";
 // doubles
 var news  = { headline: "This is headline 1", imageURL: "http://image1.jpg"};
 var news2 = { headline: "This is headline 2", imageURL: "http://image2.jpg" };
