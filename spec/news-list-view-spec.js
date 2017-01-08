@@ -16,5 +16,5 @@ var newslist = {
 (function(){
   test.description = "It should list news with headline in html";
   var view = new NewsListView( newslist );
-  assert.isTrue( view.changeToHTML() === "<img src=http://imageURL width=70% ><ul><div>This is a headline</div></ul>" );
+  assert.isTrue( view.changeToHTML() === "<img src=http://imageURL><ul><div>This is a headline</div></ul>" );
 })();

@@ -7,7 +7,7 @@
   NewsListView.prototype.changeToHTML = function(){
       var allNews = this.list.getAllNews()
       var listInHtml = allNews.map(function(news){
-        return "<img src=" + news.imageURL + " width=70% >" + "<ul><div>" + news.headline + "</div></ul>"
+        return "<img src=" + news.imageURL + ">" + "<ul><div>" + news.headline + "</div></ul>"
       });
       return listInHtml.join('')
   };
