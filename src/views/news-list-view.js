@@ -11,9 +11,9 @@
   NewsListView.prototype.listNews = function(){
       var allNews = this.list.getAllNews()
       var listInHtml = allNews.map(function(news){
-        return "<li><div>" + news.headline + "</div></li>"
+        return "<img src=" + news.imageURL + " width=70% >" + "<ul><div>" + news.headline + "</div></ul>"
       });
-      return "<ul>" + listInHtml.join('') + "</ul>"
+      return listInHtml.join('')
   };
 
   exports.NewsListView = NewsListView;

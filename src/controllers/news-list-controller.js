@@ -1,12 +1,12 @@
 (function(exports){
 
   exports.NewsListController = {
-    createNewsList:  function(){ this.newsList = new NewsList() },
+    createList: function(){ this.list = new NewsList() },
+    createListView:  function(){ this.listView = new NewsListView( this.list ) },
     displayNewsList: function(){
-                        var newsListView = new NewsListView( this.newsList );
-                        var element = document.getElementById("news-headline")
-                        element.innerHTML = newsListView.listNews()
-                     }
+                        var element = document.getElementById("news")
+                        element.innerHTML = this.listView.listNews()
+                     },
   }
 
 })(this);
