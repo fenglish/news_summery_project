@@ -8,15 +8,16 @@
                           var element = document.getElementById("news")
                           element.innerHTML = this.listView.changeToHTML()
                        },
-    // displaySingleNews: function(){
-    //                       var self = this;
-    //                       window.addEventListener("hashchange", function(){
-    //                       var id = window.location.href.split("#")[1]
-    //                       var news = self.list[id];
-    //                       var singleNewsView = new SingleNewsView( news );
-    //                       element.innerHTML = singleNewsView.changeToHTML();
-    //                     },
-
+    displaySingleNews: function(){
+                          var self = this;
+                          window.addEventListener("hashchange", function(){
+                          var id = window.location.href.split("#")[1]
+                          var news = self.list.getAllNews()[id];
+                          var singleNewsView = new SingleNewsView( news );
+                          var element = document.getElementById("news")
+                          element.innerHTML = singleNewsView.changeToHTML();
+                        });
+                      }
   }
 
 })(this);

@@ -13,5 +13,5 @@ var news = { headline: "This is a headline",
 (function(){
   test.description = "It should show news with image & headline & summary in html";
   var singleNewsView = new SingleNewsView( news );
-  assert.isTrue( singleNewsView.changeHTML() === "<img src=http://image.jpg ><br><h1>This is a headline</h1>It was a long text but was summarized");
+  assert.isTrue( singleNewsView.changeToHTML() === "<img src=http://image.jpg ><br><h1>This is a headline</h1>It was a long text but was summarized");
 })();

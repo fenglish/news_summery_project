@@ -1,10 +1,7 @@
 test.constructorName = "NewsListView";
 // doubles
-var news = { headline: "This is a headline", imageURL: "http://imageURL"};
-
-var newslist = {
-  getAllNews: function(){ return [news] }
-};
+var news = { headline: "This is a headline", imageURL: "http://imageURL", id:0 };
+var newslist = { getAllNews: function(){ return [news] } };
 
 // tests
 (function(){
@@ -16,5 +13,5 @@ var newslist = {
 (function(){
   test.description = "It should list news with headline in html";
   var view = new NewsListView( newslist );
-  assert.isTrue( view.changeToHTML() === "<img src=http://imageURL><ul><div>This is a headline</div></ul>" );
+  assert.isTrue( view.changeToHTML() === "<img src=http://imageURL><h3><a href=\"#0\">This is a headline</a></h3><br><br>" );
 })();

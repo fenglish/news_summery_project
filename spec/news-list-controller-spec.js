@@ -1,7 +1,7 @@
 test.constructorName = "NewsListController";
 // doubles
-var news  = { headline: "This is headline 1", imageURL: "http://image1.jpg"};
-var news2 = { headline: "This is headline 2", imageURL: "http://image2.jpg" };
+var news  = { headline: "This is headline 1", imageURL: "http://image1.jpg", id:0, summary: "It was a long text but was summarized"};
+var news2 = { headline: "This is headline 2", imageURL: "http://image2.jpg", id:1, summary: "It was a long text but was summarized"};
 var newslist0 = { getAllNews: function(){ return [] } };
 var newslist1 = { getAllNews: function(){ return [news] } };
 var newslist2 = { getAllNews: function(){ return [news, news2] } };
@@ -56,4 +56,18 @@ var newslist2 = { getAllNews: function(){ return [news, news2] } };
   NewsListController.displayNewsList()
   var element = document.getElementById("news")
   assert.isTrue( element.innerHTML.includes("http://image1.jpg") && element.innerHTML.includes("http://image2.jpg") )
+})();
+
+(function(){
+  test.description = "It should show single news page";
+  NewsListController.list = newslist2
+  NewsListController.createListView()
+  NewsListController.displayNewsList()
+  NewsListController.displaySingleNews()
+  window.location.href = "#0";
+  var element = document.getElementById("news")
+  window.addEventListener("hashchange", function(){
+    assert.isTrue( element.innerHTML === "<img src=\"http://image1.jpg\"><br><h1>This is headline 1</h1>It was a long text but was summarized" )
+  });
+
 })();

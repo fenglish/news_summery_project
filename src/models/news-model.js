@@ -5,6 +5,7 @@
     this.sourceURL = ""
     this.imageURL = ""
     this.summary = ""
+    this.id = 0
   }
 
   News.prototype.getHeadline = function(){

@@ -4,7 +4,7 @@
     this.news = news
   }
 
-  SingleNewsView.prototype.changeHTML = function(){
+  SingleNewsView.prototype.changeToHTML = function(){
     var image    = "<img src=" + this.news.imageURL + " >"
     var headline = "<h1>" + this.news.headline + "</h1>"
     var summary  = this.news.summary
