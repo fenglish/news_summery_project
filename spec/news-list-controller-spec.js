@@ -46,8 +46,7 @@ var newslist2 = { getAllNews: function(){ return [news, news2] } };
   NewsListController.createListView()
   NewsListController.displayNewsList()
   var element = document.getElementById("news")
-  assert.isTrue( element.innerHTML.includes("This is headline 1") );
-  assert.isTrue( element.innerHTML.includes("This is headline 2") );
+  assert.isTrue( element.innerHTML.includes("This is headline 1") && element.innerHTML.includes("This is headline 2") );
 })();
 
 (function(){
@@ -56,6 +55,5 @@ var newslist2 = { getAllNews: function(){ return [news, news2] } };
   NewsListController.createListView()
   NewsListController.displayNewsList()
   var element = document.getElementById("news")
-  assert.isTrue( element.innerHTML.includes("http://image1.jpg") )
-  assert.isTrue( element.innerHTML.includes("http://image2.jpg") );
+  assert.isTrue( element.innerHTML.includes("http://image1.jpg") && element.innerHTML.includes("http://image2.jpg") )
 })();
